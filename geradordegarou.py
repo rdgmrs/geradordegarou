@@ -37,8 +37,9 @@ def savechartxt():
 
 
 #o for não está repetindo o comando o numero de vezes discrito no range....
-for x in range(0,100,1):
-  savechartxt()
+#notei rodando 10000 que não está repetindo o nome 
+for x in range(0,10000,1):
+  x = savechartxt()
 
 
 
