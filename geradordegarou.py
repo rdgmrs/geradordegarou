@@ -13,7 +13,6 @@ def nomesrandom(nomes):
     novonome = random.choice(nomes)
     return novonome
 #print(nomesrandom(nomes))
-
 #tribos
 def tribosrandom(tribos):
   return random.choice(tribos)
@@ -28,18 +27,18 @@ def auguriosrandom(augúrios):
 #print(auguriosrandom(augúrios))
 
 
-
 def savechartxt(): 
     nomedoarquivo = (nomesrandom(nomes))
     with open(nomedoarquivo, 'a+') as file: #escreve/cria o txt
         file.write(nomedoarquivo)     #(nomesrandom(nomes))#poe um cursor pra escrever um texto
-        file.write(','+tribosrandom(tribos))#poe um cursor pra escrever um texto
-        file.write(','+racasrandom(raças))#poe um cursor pra escrever um texto
-        file.write(','+auguriosrandom(augúrios))#poe um cursor pra escrever um texto
-savechartxt()
+        file.write(', '+tribosrandom(tribos))#poe um cursor pra escrever um texto
+        file.write(', '+racasrandom(raças))#poe um cursor pra escrever um texto
+        file.write(', '+auguriosrandom(augúrios))#poe um cursor pra escrever um texto
 
 
-
+#o for não está repetindo o comando o numero de vezes discrito no range....
+for x in range(0,100,1):
+  savechartxt()
 
 
 
